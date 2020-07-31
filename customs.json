@@ -1,0 +1,18 @@
+{
+    "elements": {},
+    "attributes": {
+        "th:text": {
+            "context": "th"
+        },
+        "th:if": {},
+        "th:object": {},
+        "${file}\"": {},
+        "th:ref": {
+            "context": "a"
+        },
+        "th:each": {},
+        "th:href": {
+            "context": "a"
+        }
+    }
+}
