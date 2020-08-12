@@ -4,8 +4,10 @@ import org.springframework.util.StringUtils;
 import com.sofiaq.springbootuploadfiletodb.models.FileDB;
 import com.sofiaq.springbootuploadfiletodb.repository.FileDBRepository;
 import java.io.IOException;
+import java.util.List;
 import java.util.stream.Stream;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -29,5 +31,11 @@ public class FileStorageService {
     public Stream<FileDB> getAllFiles(){
         return fileDBRepository.findAll().stream();
     }
+    
+    public Stream<FileDB> searching(String q){
+        return fileDBRepository.findByNameContaining(q).stream();
+    }
+    
+    
     
 }

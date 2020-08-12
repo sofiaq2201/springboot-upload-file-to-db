@@ -7,6 +7,9 @@
         "th:if": {},
         "th:object": {},
         "${file}\"": {},
+        "th:action": {
+            "context": "form"
+        },
         "th:ref": {
             "context": "a"
         },
